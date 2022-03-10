@@ -8,15 +8,6 @@ var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      builder =>
-                      {
-                          builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
-                      });
-});
-
 // Add services to the container.
 
 builder.Services.AddControllersWithViews();
@@ -25,6 +16,15 @@ builder.Services.AddDbContext<DBContext>(options => options.UseSqlServer(connect
 
 builder.Services.AddTransient(typeof(IUnitOfWork), typeof(UnitOfWork));
 builder.Services.AddTransient(typeof(IModelRepository<>), typeof(ModelRepository<>));
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: MyAllowSpecificOrigins,
+                      builder =>
+                      {
+                          builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                      });
+});
 
 var app = builder.Build();
 

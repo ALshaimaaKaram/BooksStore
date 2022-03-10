@@ -1,4 +1,5 @@
 ﻿using BookStore.Models;
+using Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,9 @@ namespace BookStore.Repositories
 {
     public class ModelRepository<T> : IModelRepository<T> where T : BaseModel
     {
-        DbContext context;
+        DBContext context;
         DbSet<T> table;
-        public ModelRepository(DbContext _context)
+        public ModelRepository(DBContext _context)
         {
             context = _context;
             table = context.Set<T>();
