@@ -1,0 +1,17 @@
+<h3 class="mt-2 text-success text-center">List of Book</h3>
+<table class="table text-white mt-3">
+  <thead>
+    <tr class="bg-dark">
+      <th scope="col-2">#</th>
+      <th scope="col-2">Title</th>
+      <th scope="col-2">DateOfPublication</th>
+      <th scope="col-2">Cover</th>
+      <th scope="col-2">Description</th>
+      <th scope="col-2">Authors</th>
+    </tr>
+  </thead>
+  <tbody>
+    <app-TableRow *ngFor="let book of booksList" [book] = 'book'></app-TableRow>
+    <!-- *ngFor="let book of booksList" [book] = 'book' -->
+  </tbody>
+</table>

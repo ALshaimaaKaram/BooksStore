@@ -1,0 +1,20 @@
+﻿{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:55689"
+    }
+  },
+  "profiles": {
+    "BookStore.Present": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:5254"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true
+    }
+  }
+}
