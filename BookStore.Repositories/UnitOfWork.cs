@@ -12,7 +12,7 @@ namespace BookStore.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        DBContext context;
+        DbContext context;
         IModelRepository<Book> bookRepo;
         IModelRepository<Author> authorRepo;
         public UnitOfWork(DBContext _context, IModelRepository<Book> _bookRepo, IModelRepository<Author> _authorRepo)

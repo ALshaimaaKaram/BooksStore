@@ -15,6 +15,8 @@ export class HomeComponent implements OnInit {
     this.bookService.getAllBookks().subscribe({
       next:(books) =>
       {
+        debugger
+        console.log(books)
         this.booksList = books;
       }
     })

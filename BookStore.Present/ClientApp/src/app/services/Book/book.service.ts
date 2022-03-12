@@ -13,6 +13,7 @@ export class BookService {
 
   getAllBookks():Observable<IBook>
   {
-    return this.httpService.get<IBook>(`${environment.APIURL}` + '/Book/Get');
+    debugger
+    return this.httpService.get<IBook>(`${environment.APIURL}Book/Get`);
   }
 }

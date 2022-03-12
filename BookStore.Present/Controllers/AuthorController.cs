@@ -11,7 +11,7 @@ namespace BookStore.Present.Controllers
         IModelRepository<Author> authorRepo;
         IUnitOfWork unitOfWork;
 
-        public AuthorController(UnitOfWork _unitOfWork)
+        public AuthorController(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
             authorRepo = unitOfWork.GetAuthorRepo();

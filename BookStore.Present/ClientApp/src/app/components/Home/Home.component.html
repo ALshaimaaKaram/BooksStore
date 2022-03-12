@@ -11,7 +11,7 @@
     </tr>
   </thead>
   <tbody>
-    <app-TableRow *ngFor="let book of booksList" [book] = 'book'></app-TableRow>
+    <app-TableRow *ngFor="let book of booksList" [book]="book"></app-TableRow>
     <!-- *ngFor="let book of booksList" [book] = 'book' -->
   </tbody>
 </table>

@@ -11,7 +11,7 @@ namespace BookStore.Present.Controllers
         IModelRepository<Book> bookRepo;
         IUnitOfWork unitOfWork;
 
-        public BookController(UnitOfWork _unitOfWork)
+        public BookController(IUnitOfWork _unitOfWork)
         {
             unitOfWork = _unitOfWork;
             bookRepo = unitOfWork.GetBookRepo();
