@@ -11,9 +11,9 @@ export class BookService {
 
   constructor(private httpService:HttpClient) { }
 
-  getAllBookks():Observable<IBook>
+  getAllBookks():Observable<IBook[]>
   {
     debugger
-    return this.httpService.get<IBook>(`${environment.APIURL}Book/Get`);
+    return this.httpService.get<IBook[]>(`${environment.APIURL}Book/Get`);
   }
 }

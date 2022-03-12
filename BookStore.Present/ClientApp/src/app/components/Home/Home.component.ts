@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { IBook } from 'src/app/models/IBook';
 import { BookService } from 'src/app/services/Book/book.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { BookService } from 'src/app/services/Book/book.service';
 })
 export class HomeComponent implements OnInit {
 
-  booksList: any;
+  booksList: IBook[] = [];
   constructor(private bookService:BookService) { }
 
   ngOnInit() {
@@ -18,6 +19,7 @@ export class HomeComponent implements OnInit {
         debugger
         console.log(books)
         this.booksList = books;
+        console.log(this.booksList)
       }
     })
   }

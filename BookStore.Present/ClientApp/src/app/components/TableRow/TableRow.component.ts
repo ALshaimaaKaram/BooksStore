@@ -11,7 +11,9 @@ import { IBook } from 'src/app/models/IBook';
 export class TableRowComponent implements OnInit {
 
   @Input() book:IBook = {} as IBook;
-  constructor() { }
+  constructor() {
+    debugger
+  }
 
   ngOnInit() {
   }

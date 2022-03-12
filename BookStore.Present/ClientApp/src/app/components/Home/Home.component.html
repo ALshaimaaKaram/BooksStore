@@ -11,7 +11,13 @@
     </tr>
   </thead>
   <tbody>
-    <app-TableRow *ngFor="let book of booksList" [book]="book"></app-TableRow>
-    <!-- *ngFor="let book of booksList" [book] = 'book' -->
+    <tr *ngFor="let book of booksList let i = index" class="text-dark">
+      <td>{{i+1}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.dateOfPublication}}</td>
+      <td><img [src]="book.cover"></td>
+      <td>{{book.description}}</td>
+      <!-- <app-TableRow *ngFor="let book of booksList" [book]="book"></app-TableRow> -->
+    </tr>
   </tbody>
 </table>
